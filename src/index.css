@@ -1,0 +1,15 @@
+.textWrapper {
+    display: flex;
+    min-width: 0;
+}
+
+.ellipsisWrapper {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.tailText {
+    flex-shrink: 0;
+}
+    
