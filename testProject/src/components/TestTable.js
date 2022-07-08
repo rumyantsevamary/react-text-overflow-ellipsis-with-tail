@@ -1,6 +1,6 @@
 import React from 'react';
 //import { TextOverflowElipsisWithTail } from './TextOverflowElipsisWithTail';
-import {TextOverflowElipsisWithTail} from 'react-text-overflow-ellipsis-with-tail';
+import { TextOverflowElipsisWithTail } from 'react-text-overflow-ellipsis-with-tail';
 import { LOREM_IPSUM } from '../mock';
 
 /**
