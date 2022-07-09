@@ -9,7 +9,7 @@
     overflow: hidden;
 }
 
-.tailText {
+.tailWrapper {
     flex-shrink: 0;
 }
     

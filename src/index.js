@@ -7,12 +7,28 @@ import styles from './index.css';
  * 
  * @return {JSX.Element}
  */
-export const TextOverflowElipsisWithTail = ({ children: text, tailLength, title = text, className }) => {
-    if (typeof(text) !== 'string') {
-        console.error('Invalid type of passed children. Only \'string\' allowed');
+export const TextOverflowElipsisWithTail = ({ children: text, tailLength = 0, title, className }) => {
+    // Hanlde incorrect type of children.
+    if (typeof (text) !== 'string') {
+        console.error('Invalid type of passed child. Only \'string\' allowed');
         return null;
     }
 
+    const textLength = text.length;
+    let tailText = null;
+    let ellipsisText = text;
+
+    if (typeof tailLength == 'number' && tailLength > 0) {
+        if (textLength > tailLength) {
+            tailText = text.substring(textLength - tailLength);
+            ellipsisText = text.substring(0, textLength - tailLength);
+        } else {
+            tailText = text;
+            ellipsisText = null;
+        }
+    }
+
+    // Copy the whole string including hidden part.
     const handleCopy = (event) => {
         navigator.clipboard.readText().then((copiedText) => {
             navigator.clipboard.writeText(copiedText.replace(/\n/g, ' '));
@@ -21,12 +37,16 @@ export const TextOverflowElipsisWithTail = ({ children: text, tailLength, title 
 
     return (
         <div onCopy={handleCopy} title={title} className={`${styles.textWrapper} ${className}`}>
-            <span className={styles.ellipsisWrapper}>
-                {text.substring(0, text.length - tailLength)}
-            </span>
-            <span className={styles.tailText}>
-                {text.substring(text.length - tailLength)}
-            </span>
+            {ellipsisText && (
+                <span className={styles.ellipsisWrapper}>
+                    {ellipsisText}
+                </span>
+            )}
+            {tailText && (
+                <span className={styles.tailWrapper}>
+                    {tailText}
+                </span>
+            )}
         </div>
     );
 }

@@ -1,7 +1,7 @@
 {
   "name": "react-text-overflow-ellipsis-with-tail",
   "version": "1.0.0",
-  "description": "React component that work as text-overflow: ellipsis style with possibility to display some text on the tail",
+  "description": "React component that works as text-overflow: ellipsis style with possibility to display some text on the tail",
   "main": "./dist/index.js",
   "repository": {
     "type": "git",

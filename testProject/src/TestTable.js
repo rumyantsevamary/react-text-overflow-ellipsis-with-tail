@@ -37,8 +37,8 @@ export const TestTable = () => {
         array2000.push((
             <RowWrapper key={i}>
                 <Cell>
-                    <TextOverflowElipsisWithTail tailLength={TAIL_LENGTH} className='myClassname'>
-                        {LOREM_IPSUM}
+                    <TextOverflowElipsisWithTail tailLength={0} className='myClassname' title={LOREM_IPSUM}>
+                        {'kdhfskjngsfgjhsfgsjsdfhgskjncvndjhfekshggkjsdngkdjfghsdkfg'}
                     </TextOverflowElipsisWithTail>
                 </Cell>
                 <Cell>
