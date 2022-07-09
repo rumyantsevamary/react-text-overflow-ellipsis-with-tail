@@ -7,13 +7,20 @@ import styles from './index.css';
  * 
  * @return {JSX.Element}
  */
-export const TextOverflowElipsisWithTail = ({ children: text, tailLength = 0, title, className }) => {
+export const TextOverflowElipsisWithTail = ({ children: text, tailLength: passedTailLength = 0, title, className }) => {
     // Hanlde incorrect type of children.
     if (typeof (text) !== 'string') {
         console.error('Invalid type of passed child. Only \'string\' allowed');
         return null;
     }
 
+    // Covert tailLength passed as string to number if possible.
+    let tailLength = passedTailLength;
+    if (typeof passedTailLength == 'string' &&  !Number.isNaN(+passedTailLength)) {
+        tailLength = +passedTailLength;
+    }
+
+    //Calculate content of ellipsis and tail blocks.
     const textLength = text.length;
     let tailText = null;
     let ellipsisText = text;

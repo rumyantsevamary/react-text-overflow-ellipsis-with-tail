@@ -6,7 +6,7 @@ Project that helps to create environment for the component to test its features 
 First install dependencies:
 
 ```sh
-npm install
+npm ci
 ```
 
 To run in hot module reloading mode:

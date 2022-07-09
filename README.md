@@ -33,10 +33,10 @@ export default Demo;
 
 ## Props
 
-|        Name        |         Description           |       Type         |  isRequred |      Default     | 
-|--------------------|-------------------------------|--------------------|------------|------------------|
-|   tailLength       | number of characters visible  |      number        |   true     |         0        |  
-|                    | in the end of passed string   |                    |            |                  | 
-|   title            | tooltip text that shown when  |      string        |   false    |         -        |
-|                    | mouse moves over the element  |                    |            |                  |         
-|   className        | additional className          |      string        |   false    |         -        |                  
+|        Name        |         Description            |       Type         |  isRequred |      Default     | 
+|:-------------------|:-------------------------------|:------------------:|:----------:|:----------------:|
+|   tailLength       | number of characters visible   |      number        |   true     |         0        |  
+|                    | in the end of passed string    |                    |            |                  | 
+|   title            | tooltip text thatis shown when |      string        |   false    |         -        |
+|                    | mouse moves over the element   |                    |            |                  |         
+|   className        | additional className           |      string        |   false    |         -        |                  
