@@ -16,7 +16,7 @@ export const TextOverflowElipsisWithTail = ({ children: text, tailLength: passed
 
     // Covert tailLength passed as string to number if possible.
     let tailLength = passedTailLength;
-    if (typeof passedTailLength == 'string' &&  !Number.isNaN(+passedTailLength)) {
+    if (typeof passedTailLength == 'string' && !Number.isNaN(+passedTailLength)) {
         tailLength = +passedTailLength;
     }
 
@@ -43,14 +43,14 @@ export const TextOverflowElipsisWithTail = ({ children: text, tailLength: passed
     }
 
     return (
-        <div onCopy={handleCopy} title={title} className={`${styles.textWrapper} ${className}`}>
+        <div onCopy={handleCopy} title={title} className={`${styles.textWrapper} ${className}`} data-testid={'textWrapper'}>
             {ellipsisText && (
-                <span className={styles.ellipsisWrapper}>
+                <span className={styles.ellipsisWrapper} data-testid={'ellipsisWrapper'}>
                     {ellipsisText}
                 </span>
             )}
             {tailText && (
-                <span className={styles.tailWrapper}>
+                <span className={styles.tailWrapper} data-testid={'tailWrapper'}>
                     {tailText}
                 </span>
             )}

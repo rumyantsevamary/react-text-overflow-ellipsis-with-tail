@@ -1,7 +1,7 @@
 # react-text-overflow-ellipsis-with-tail
 React component for shortening single-line text. 
 The maximum width of the text is limited by the width of the container. 
-The text that does not fitis reduced to an ellipsis (...), 
+The text that does not fit is reduced to an ellipsis (...), 
 but the last N characters should always be output.
 
 Source code at https://github.com/rumyantsevamary/react-text-overflow-ellipsis-with-tail

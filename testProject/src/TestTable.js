@@ -38,7 +38,7 @@ export const TestTable = () => {
             <RowWrapper key={i}>
                 <Cell>
                     <TextOverflowElipsisWithTail tailLength={'5'} className='myClassname' title={LOREM_IPSUM}>
-                        {'kdhfskjngsfgjhsfgsjsdfhgskjncvndjhfekshggkjsdngkdjfghsdkfg'}
+                        {[1,2,3]}
                     </TextOverflowElipsisWithTail>
                 </Cell>
                 <Cell>
